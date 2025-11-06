@@ -1,0 +1,1 @@
+alert ip any any <> 127.0.0.0/8 any (msg:"LOOPBACK - localhost connections"; sid:666; rev:1; )
