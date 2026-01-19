@@ -68,12 +68,12 @@ class AzulPluginSuricata(BinaryPlugin):
 
     def execute(self, job: Job):
         """Run the plugin."""
-        pcap_data = job.get_all_data(file_format_legacy="Network capture")
+        pcap_data = job.get_all_data(file_format="network/tcpdump")
 
         if not pcap_data:
             # This is an error (in the dispatcher/cmdline_run),
-            # since we asked for 'Network capture' in our INPUT_CONTENT
-            return State(label=State.Label.ERROR_EXCEPTION, message='job has no "Network capture" streams')
+            # since we asked for 'network/tcpdump' in our INPUT_CONTENT
+            return State(label=State.Label.ERROR_EXCEPTION, message='job has no "network/tcpdump" streams')
 
         config_dir = impresources.files(config)
 
