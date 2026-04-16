@@ -1,3 +1,4 @@
 libmagic-dev
 suricata
 git
+openssh-client
