@@ -1,5 +1,7 @@
+# check for new releases https://github.com/OISF/suricata/releases
+
 # Automatically remove old version
-SURICATA_VERSION=suricata-7.0.10
+SURICATA_VERSION=suricata-8.0.4
 # rm -fr ./$SURICATA_VERSION # Optinonally delete directory
 rm -f $SURICATA_VERSION.tar.gz
 
