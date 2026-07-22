@@ -23,7 +23,7 @@ class TestExecute(test_template.TestPlugin):
                     ),
                 )
             ],
-            config=config,
+            config=config,  # ty: ignore[invalid-argument-type]
         )
         # split out list access to show any empty list errors
         print(result)
