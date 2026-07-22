@@ -50,7 +50,7 @@ class AzulPluginSuricata(BinaryPlugin):
 
         rule_file_count = 0
 
-        for root, _dirs, files in os.walk(self.cfg.rules_path):
+        for root, _dirs, files in os.walk(self.cfg.rules_path):  # ty: ignore[unresolved-attribute] ty doesn't understand add_settings
             for file in files:
                 if file.split(".")[-1].lower() in ["rules", "snort"]:
                     rule_file_count += 1
@@ -116,7 +116,7 @@ class AzulPluginSuricata(BinaryPlugin):
                             stdin=None,
                             stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE,
-                            timeout=self.cfg.subprocess_timeout,
+                            timeout=self.cfg.subprocess_timeout,  # ty: ignore[unresolved-attribute] ty doesn't understand add_settings
                             cwd=suricata_config_dir,
                             encoding="utf8",
                         )
