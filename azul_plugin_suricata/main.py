@@ -111,7 +111,7 @@ class AzulPluginSuricata(BinaryPlugin):
 
                         command = ["suricata", "-c", "suricata.yaml", "-s", rule_file.name, "-r", tmp.name]
 
-                        res: subprocess.CompletedProcess = subprocess.run(  # nosec: B603
+                        res: subprocess.CompletedProcess = subprocess.run(  # noqa: S603
                             args=command,
                             stdin=None,
                             stdout=subprocess.PIPE,
